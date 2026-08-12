@@ -1,56 +1,79 @@
-Proceso de QA y Testing
+# 🖐️ Sistema de Partículas 3D Interactivo – Three.js + Hand Tracking
 
-Durante el desarrollo se aplicaron prácticas de QA manual:
+## 📌 Descripción
 
-Diseño y ejecución de casos de prueba para detectar errores de interacción
+Proyecto de partículas 3D interactivo en tiempo real desarrollado con **Three.js** y **MediaPipe Hands**.
 
-Pruebas exploratorias de gestos y animaciones
+La aplicación utiliza la **cámara web del dispositivo** para detectar las manos y sus gestos, permitiendo al usuario interactuar con el sistema de partículas en tiempo real.
 
-Documentación de incidencias y ajuste iterativo para mejorar UX/UI
+Al ingresar a la experiencia, el usuario debe otorgar permiso de acceso a la cámara. Una vez habilitada, los movimientos y gestos de las manos son detectados mediante la webcam y utilizados para modificar dinámicamente la escala, expansión, tamaño y color de las partículas.
 
-Validación de la física de partículas y cálculo de posiciones en tiempo real
+El proyecto fue desarrollado de manera iterativa, incorporando **testing funcional y exploratorio** para validar tanto el comportamiento de la aplicación como la interacción entre el usuario, la cámara y el sistema de partículas.
 
-Capturas / GIF
+---
 
-(Opcional: incluir imágenes o GIF de la demo para ilustrar la interacción)
+## ✨ Funcionalidades
 
-Contribuciones
+* 🟣 Partículas 3D dinámicas con animaciones suaves.
+* 📷 Acceso a la cámara web mediante permiso del usuario.
+* ✋ Detección de manos en tiempo real mediante webcam.
+* 🤏 Control de escala y expansión mediante gestos.
+* 👋 Detección de gestos como pinch, apertura y cierre de la mano.
+* 🎨 Cambio dinámico de color y tamaño según la interacción.
+* 🌌 Movimiento y dispersión de partículas en tiempo real.
+* 🎬 Animación de bienvenida **"BIENVENIDOS"** ante un gesto específico.
+* ⚙️ Gestión de estados del sistema:
 
-Este proyecto es abierto a la experimentación:
+  * `QA_IDLE`
+  * `BIENVENIDOS_ANIMATING`
+* 🖥️ Experiencia interactiva directamente desde el navegador.
 
-Mejoras en la experiencia de usuario y animaciones
+---
 
-Ajustes de física de partículas
+## 🧪 Proceso de QA y Testing
 
-Integración con otros sistemas interactivos
-Sistema de Partículas 3D Interactivo – Three.js + Hands Tracking
-Descripción
+Durante el desarrollo se realizaron actividades de **QA manual y testing exploratorio**, con especial foco en la interacción en tiempo real entre el usuario, la cámara web, los gestos y el sistema de partículas.
 
-Proyecto de partículas 3D interactivo en tiempo real desarrollado con Three.js.
-Permite controlar la escala y expansión del grupo de partículas mediante gestos de manos detectados con la webcam.
+### 🔎 Pruebas funcionales
 
-El proyecto se desarrolló de manera iterativa, incluyendo testing manual y exploratorio para asegurar la calidad de la interacción, la física de partículas y la experiencia de usuario. Se simula un hub interactivo que responde a los movimientos y gestos de las manos, con animaciones y cambios de color dinámicos.
+Se diseñaron y ejecutaron pruebas para validar:
 
-Funcionalidades
+* Acceso y carga inicial de la aplicación.
+* Solicitud de permisos para utilizar la cámara web.
+* Comportamiento de la aplicación al **aceptar el permiso de cámara**.
+* Comportamiento de la aplicación al **rechazar o bloquear el permiso de cámara**.
+* Detección de manos mediante la webcam.
+* Reconocimiento de diferentes gestos.
+* Respuesta de las partículas ante cada interacción.
+* Cambios de escala, expansión, color y tamaño.
+* Activación de la animación **"BIENVENIDOS"**.
+* Transiciones entre los diferentes estados del sistema.
+* Comportamiento de las partículas durante la interacción en tiempo real.
 
-Partículas 3D dinámicas con animaciones suaves
+### 🧭 Testing exploratorio
 
-Control de escala y expansión del grupo de partículas mediante gestos de manos (pinch, apertura/cierre)
+Se realizaron pruebas exploratorias orientadas a detectar comportamientos inesperados durante la interacción:
 
-Cambio de color y tamaño según la interacción
+* Diferentes posiciones de las manos frente a la cámara.
+* Movimientos rápidos y lentos.
+* Apertura y cierre repetido de la mano.
+* Gestos realizados a diferentes distancias de la cámara.
+* Interacciones repetitivas.
+* Cambios entre diferentes gestos.
+* Comportamiento ante pérdida temporal de detección de la mano.
+* Respuesta visual y fluidez de las animaciones.
 
-Animación de bienvenida (“BIENVENIDOS”) cuando se detecta gesto específico
+### 🐛 Gestión de incidencias
 
-Estados del sistema: QA_IDLE, BIENVENIDOS_ANIMATING
+Las incidencias encontradas durante las pruebas fueron documentadas y utilizadas como base para realizar ajustes iterativos sobre la funcionalidad y la experiencia de usuario.
 
-Simulación de física básica de partículas con movimiento y dispersión
+Luego de cada modificación se realizaron **re-tests** para verificar la corrección de los comportamientos identificados.
 
-Tecnologías
+### 🎯 Enfoque de QA
 
-JavaScript / Three.js – renderizado 3D y partículas
+El proceso de testing estuvo orientado principalmente a validar:
 
-MediaPipe Hands – detección de manos en tiempo real
+**Permisos → Cámara → Detección → Gestos → Interacción → Animaciones → Física → UX/UI**
 
-HTML / Canvas / WebGL – visualización y animación
+De esta manera se buscó garantizar que la experiencia completa funcionara correctamente desde el acceso inicial a la cámara hasta la interacción del usuario con las partículas en tiempo real.
 
-Testing y QA: pruebas funcionales, exploratorias y ajuste iterativo
